@@ -22,6 +22,8 @@ module.exports.routes = {
   '/':         'AuthController.welcome',
   '/callback': '/',
 
+  '/profile':   'AuthController.profile',
+
 
   /***************************************************************************
   *                                                                          *
