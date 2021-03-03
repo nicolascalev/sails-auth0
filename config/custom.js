@@ -20,9 +20,12 @@ module.exports.custom = {
   // …
 
   auth0: {
-    ISSUER_BASE_URL: 'dev-nicolascalev.us.auth0.com',
-    CLIENT_ID: 'i3vGB7TPfuJH76pzuSAZfPgWa4DhspEC',
-    BASE_URL: 'http://localhost:1337',
-    SECRET: 'p5h_tMnIFZF5bG9-KbFNml8kB3F99EqHtNOO4ur2byQhhSOrHsh6E3fMMNWAZaKl',
+    authRequired: false,
+    auth0Logout: true,
+    idpLogout: true,
+    issuerBaseURL: 'https://dev-nicolascalev.us.auth0.com',
+    clientID: 'i3vGB7TPfuJH76pzuSAZfPgWa4DhspEC',
+    baseURL: 'http://localhost:1337',
+    secret: 'p5h_tMnIFZF5bG9-KbFNml8kB3F99EqHtNOO4ur2byQhhSOrHsh6E3fMMNWAZaKl',
   },
 };
