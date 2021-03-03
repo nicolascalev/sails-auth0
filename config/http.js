@@ -44,6 +44,8 @@ module.exports.http = {
       const { auth } = require('express-openid-connect');
       // var middlewareFn = auth(sails.config.custom.auth0);
       var middlewareFn = auth({
+        authRequired: false,
+        auth0Logout: true,
         issuerBaseURL: 'https://dev-nicolascalev.us.auth0.com',
         clientID: 'i3vGB7TPfuJH76pzuSAZfPgWa4DhspEC',
         baseURL: 'http://localhost:1337',
