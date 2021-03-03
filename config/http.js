@@ -33,11 +33,25 @@ module.exports.http = {
       'cookieParser',
       'bodyParser',
       'compress',
+      'expressOpenidConnect',
       'poweredBy',
       'router',
       'www',
       'favicon',
     ],
+
+    expressOpenidConnect: (function _configureAuth0 () {
+      const { auth } = require('express-openid-connect');
+      // var middlewareFn = auth(sails.config.custom.auth0);
+      var middlewareFn = auth({
+        issuerBaseURL: 'https://dev-nicolascalev.us.auth0.com',
+        clientID: 'i3vGB7TPfuJH76pzuSAZfPgWa4DhspEC',
+        baseURL: 'http://localhost:1337',
+        secret: 'p5h_tMnIFZF5bG9-KbFNml8kB3F99EqHtNOO4ur2byQhhSOrHsh6E3fMMNWAZaKl',
+        idpLogout: true,
+      });
+      return middlewareFn;
+    })(),
 
 
     /***************************************************************************
